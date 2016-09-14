@@ -1,0 +1,115 @@
+﻿body {
+	font-weight: 300;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:#E1EEDC;
+    font-family: proxima-nova, sans-serif;
+    color:#1467A1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "proxima-nova-alt-ext-cond",sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* buttons and links extension to use brackets: [ click me ] */
+.btn-bracketed::before {
+    display:inline-block;
+    content: "[";
+    padding-right: 0.5em;
+}
+.btn-bracketed::after {
+    display:inline-block;
+    content: "]";
+    padding-left: 0.5em;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"]
+{
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+  /* Hide captions */
+  .carousel-caption {
+    display: none
+  }
+}
+
+.btn-primary {
+  color: #1467A1;
+  background-color: #5BB693;
+  border-color: #1467A1;
+}
+
+.btn-default {
+  color: #1467A1;
+  background-color: #DDD584;
+  border-color: #1467A1;
+}
+
+.list-group-item {
+   /* background-color: #A5A5A5;*/
+    border: 1px solid transparent;
+
+    /* default fallback */
+background: rgb(128, 128, 128) transparent;
+/* nice browsers */
+background-color: rgba(128, 128, 128, 0.4);
+/* IE 6/7 */
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF);
+/* IE8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+}
+
+.panel-default > .panel-heading {
+    color: #DDD584;
+    background-color: #1467A1;
+    border-color: #1467A1;
+}
+
+.panel-transparent {
+    background-color:transparent;
+    border-color:transparent;
+}
+b,
+strong {
+  font-weight: 700;
+}
+
+.table > thead > tr > th {
+    border-bottom:2px solid transparent;
+}

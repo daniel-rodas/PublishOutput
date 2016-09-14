@@ -1,0 +1,48 @@
+﻿@model IEnumerable<UtilityServiceAccount>
+
+@{
+    ViewBag.Title = "Review Utility Service Account Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Review Utility Service Account Details</h2>
+<form asp-controller="UtilityServiceAccount" asp-action="Review" method="post" >
+
+    <div class="panel panel-default">
+        <table class="table table-responsive table-striped">
+            <thead class="panel-title ">
+                <tr class="panel-heading">
+
+                    <th class="col-md-1">Select</th>
+                    <th class="col-md-3">Utility Service</th>
+                    <th class="col-md-4">Account</th>
+                    <th class="col-md-4">Address</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <input type="hidden" name="accounts[]" value="@item.Id" />
+                    <tr>
+                        <td class="col-md-1"><input type="checkbox" checked="true" /></td>
+                        
+                        <td class="col-md-3">@item.Name</td>
+                        <td class="col-md-4">@item.AccountNumber</td>
+                        <td class="col-md-4">2345 Acme Dr.</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <button class="form-control btn btn-block btn-default">
+        Confirm
+    </button>
+</form>
+
+

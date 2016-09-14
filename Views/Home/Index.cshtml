@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img class="img-responsive content-block" src="~/images/logo@600px.png" />
+    <h1>Do bills the easy way</h1>
+    <ul>
+        <li>Manage invoices</li>
+        <li>Keep track of utility bills</li>
+        <li>Split payments with roomates</li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Get Started</h2>
+        <p>
+            Managing invoices is easy, just add bills from any utility service to start keeping track of payments and balances, then easily share with your roomates.
+        </p>
+        @Html.ActionLink("Get Started.", "Index", "Welcome", null, new { @class = "btn btn-lg btn-default" })
+    </div>
+    <div class="col-md-4">
+        <h2>Keep life simple</h2>
+        <p>Utility Pay keep track of past due balances and calculates balances when sharing balances with roomates. Choose to notify all parties by email or text message. </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Quick, easy, and mobile</h2>
+        <p>Send secure payments online from one simple interface that you can keep in your pocket.</p>
+    </div>
+</div>

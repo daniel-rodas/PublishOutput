@@ -1,0 +1,36 @@
+﻿@model ChooseUtilityServicesViewModel
+@{
+    ViewBag.Title = "Utility Service Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add Utility Services</h2>
+<div class="panel panel-default panel-transparent">
+    <div class="panel-heading">
+        <h3 class="panel-title">Which Utility Services do you want manage?</h3>
+    </div>
+
+    <form asp-controller="UtilityServiceAccount" asp-action="Setup" method="post" class="form-horizontal">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <ul class="list-group">
+
+            @for (int i = 0; i < Model.UtilityServices.Count; i++)
+            {
+            <li class="list-group-item chechbox">
+                <label asp-for="UtilityServices[i].IsChecked">
+                    <input asp-for="UtilityServices[i].IsChecked" type="checkbox" /> @Model.UtilityServices[i].Display
+                </label>
+
+                @Html.HiddenFor(x => @Model.UtilityServices[i].ID) @Html.HiddenFor(y => @Model.UtilityServices[i].Display) 
+                @*See more at: http://www.mzan.com/article/36855481-in-mvc-6-how-to-code-checkbox-list-in-view-and-pass-the-checked-values-to-the-c.shtml#sthash.lPdb7JRr.dpuf*@
+            </li>
+            }
+
+        </ul>
+        <button class="form-control btn btn-block btn-default">
+            Continue
+        </button>
+    </form>
+</div>
+
+
